@@ -7,17 +7,6 @@ import copperMolten from "@/assets/copper-molten.jpg";
 import copperIndustry from "@/assets/copper-industry.jpg";
 
 export const Route = createFileRoute("/leadership")({
-  head: () => ({
-    meta: [
-      { title: "Leadership — Mehtacop Refinery Pvt. Ltd." },
-      {
-        name: "description",
-        content:
-          "Meet the directors of Mehtacop Refinery — Manish P. Jain and Pravin P. Jain. Industry veterans with leadership roles at the Bombay Metal Exchange and Bombay Non-Ferrous Metal Association.",
-      },
-      { property: "og:title", content: "Leadership — Mehtacop Refinery Pvt. Ltd." },
-    ],
-  }),
   component: LeadershipPage,
 });
 

@@ -8,20 +8,9 @@ import copperMolten from "@/assets/copper-molten.jpg";
 import copperFactory from "@/assets/copper-factory.jpg";
 import copperCircuit from "@/assets/copper-circuit.jpg";
 import copperManufacturing from "@/assets/copper-manufacturing.jpg";
-import copperIndustry from "@/assets/copper-industry.jpg";
-import copperPipes from "@/assets/copper-pipes.jpg";
 import copperHero from "@/assets/copper-hero.jpg";
-import copperMfg from "@/assets/copper-manufacturing.jpg";
-import copperFact from "@/assets/copper-factory.jpg";
 
 export const Route = createFileRoute("/what-we-do")({
-  head: () => ({
-    meta: [
-      { title: "Our Products — Mehtacop Refinery Pvt. Ltd." },
-      { name: "description", content: "Precision-engineered copper cathodes, anodes, ingots, slag/dross processing and ICW scrap. ISO 9001:2015 certified manufacturer." },
-      { property: "og:title", content: "Our Products — Mehtacop Refinery Pvt. Ltd." },
-    ],
-  }),
   component: ProductsPage,
 });
 
@@ -84,31 +73,11 @@ const process = [
 ];
 
 const industries = [
-  {
-    Icon: Zap,
-    label: "Power & Electrical Infrastructure",
-    desc: "High-conductivity cathodes for cables, transformers, busbars, and switchgear.",
-  },
-  {
-    Icon: Wind,
-    label: "HVAC & Cooling Systems",
-    desc: "Precision copper for heat exchangers, refrigeration coils, and HVAC components.",
-  },
-  {
-    Icon: Car,
-    label: "Automotive & Engineering",
-    desc: "Reliable copper alloys for motors, connectors, radiators, and precision parts.",
-  },
-  {
-    Icon: Recycle,
-    label: "Metal Processing & Recycling",
-    desc: "ICW scrap and dross processing for efficient secondary copper recovery.",
-  },
-  {
-    Icon: Building2,
-    label: "Construction & Industrial Manufacturing",
-    desc: "Ingots and anodes for plumbing, roofing, industrial fabrication, and casting.",
-  },
+  { Icon: Zap, label: "Power & Electrical Infrastructure", desc: "High-conductivity cathodes for cables, transformers, busbars, and switchgear." },
+  { Icon: Wind, label: "HVAC & Cooling Systems", desc: "Precision copper for heat exchangers, refrigeration coils, and HVAC components." },
+  { Icon: Car, label: "Automotive & Engineering", desc: "Reliable copper alloys for motors, connectors, radiators, and precision parts." },
+  { Icon: Recycle, label: "Metal Processing & Recycling", desc: "ICW scrap and dross processing for efficient secondary copper recovery." },
+  { Icon: Building2, label: "Construction & Industrial Manufacturing", desc: "Ingots and anodes for plumbing, roofing, industrial fabrication, and casting." },
 ];
 
 function ProductsPage() {
@@ -153,7 +122,7 @@ function ProductsPage() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-[11px] uppercase tracking-[0.2em] text-brand-gradient font-medium mb-5">Product Range</p>
           <h2 className="text-[clamp(1.6rem,3vw,2.4rem)] font-light leading-tight tracking-tight mb-5">
-            Built for Performance-Critical Applications
+            Engineered for Performance. Refined for Excellence.
           </h2>
           <p className="text-sm text-muted-foreground font-light leading-relaxed">
             Every product is manufactured under ISO 9001:2015 standards with rigorous quality control — ensuring international benchmark compliance from raw material to final dispatch.
@@ -179,9 +148,7 @@ function ProductsPage() {
                 <p className="text-sm text-muted-foreground font-light leading-relaxed mb-5">{p.desc}</p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {p.specs.map((s) => (
-                    <span key={s} className="rounded border border-border px-3 py-1 text-xs font-light">
-                      {s}
-                    </span>
+                    <span key={s} className="rounded border border-border px-3 py-1 text-xs font-light">{s}</span>
                   ))}
                 </div>
                 <Link
@@ -233,7 +200,7 @@ function ProductsPage() {
       <section className="px-6 md:px-10 mt-28">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground font-light">How We Work</span>
-          <h2 className="mt-4 text-3xl font-light tracking-tight">Where Technology Meets Metallurgy</h2>
+          <h2 className="mt-4 text-3xl font-light tracking-tight">From Scrap to Precision Metal</h2>
           <p className="mt-4 text-sm text-muted-foreground font-light leading-relaxed">
             Every batch follows a rigorous four-stage process — from sourcing to dispatch — ensuring consistent quality and full traceability.
           </p>
@@ -264,7 +231,7 @@ function ProductsPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {industries.map(({ Icon, label, desc }) => (
-              <div key={label} className="bg-background rounded-2xl p-6 flex gap-4 hover:shadow-brand transition-shadow duration-300 group">
+              <div key={label} className="bg-background rounded-2xl p-6 flex gap-4 hover:shadow-brand transition-shadow duration-300">
                 <div className="h-11 w-11 rounded bg-brand-gradient text-white flex items-center justify-center shrink-0">
                   <Icon className="h-4 w-4" />
                 </div>
@@ -314,4 +281,3 @@ function ProductsPage() {
     </div>
   );
 }
-

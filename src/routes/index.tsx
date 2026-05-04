@@ -13,14 +13,6 @@ import copperFactory from "@/assets/copper-factory.jpg";
 import copperIngots from "@/assets/copper-ingots.jpg";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Mehtacop Refinery Pvt. Ltd. — Engineering Purity. Delivering Performance." },
-      { name: "description", content: "Global-grade copper cathodes, anodes and ingots. ISO 9001:2015 certified manufacturer and exporter. Part of the Nakoda Group of Companies." },
-      { property: "og:title", content: "Mehtacop Refinery Pvt. Ltd." },
-      { property: "og:description", content: "Engineering Purity. Delivering Performance." },
-    ],
-  }),
   component: Home,
 });
 
@@ -115,7 +107,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        {/* scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
           <div className="h-10 w-px bg-gradient-to-b from-transparent to-white/40" />
         </div>
@@ -141,7 +132,7 @@ export default function Home() {
 
       {/* ── ABOUT BANNER ── */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 mt-24">
-        <div className="relative rounded-3xl overflow-hidden h-[440px]">
+        <div className="relative rounded overflow-hidden h-[440px]">
           <img
             src={copperWire}
             alt="Copper wire and cables"
@@ -187,7 +178,7 @@ export default function Home() {
           {products.map((p, i) => (
             <article
               key={i}
-              className="group rounded-2xl bg-secondary p-7 flex flex-col gap-4 min-h-[210px] hover:shadow-brand transition-shadow duration-300"
+              className="group rounded bg-secondary p-7 flex flex-col gap-4 min-h-[210px] hover:shadow-brand transition-shadow duration-300"
             >
               <h3 className="text-lg font-light tracking-tight">{p.title}</h3>
               <p className="text-sm font-light text-muted-foreground leading-relaxed flex-1">{p.desc}</p>
@@ -199,7 +190,7 @@ export default function Home() {
               </Link>
             </article>
           ))}
-          <article className="rounded-2xl bg-brand-gradient text-white p-7 flex flex-col gap-4 min-h-[210px] relative overflow-hidden">
+          <article className="rounded bg-brand-gradient text-white p-7 flex flex-col gap-4 min-h-[210px] relative overflow-hidden">
             <div className="orbital-circles opacity-30" />
             <h3 className="relative text-lg font-light">Download Technical Specifications</h3>
             <p className="relative text-sm font-light text-white/80 leading-relaxed flex-1">
@@ -239,7 +230,7 @@ export default function Home() {
             {edge.map(({ Icon, label }, i) => (
               <div
                 key={label}
-                className="flex items-center gap-4 rounded-2xl bg-secondary px-5 py-4 hover:shadow-brand transition-shadow duration-300"
+                className="flex items-center gap-4 rounded bg-secondary px-5 py-4 hover:shadow-brand transition-shadow duration-300"
               >
                 <div className="h-10 w-10 rounded bg-brand-gradient text-white flex items-center justify-center shrink-0">
                   <Icon className="h-4 w-4" />
@@ -277,7 +268,7 @@ export default function Home() {
 
       {/* ── MANUFACTURING EXCELLENCE ── */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 mt-28">
-        <div className="relative rounded-3xl overflow-hidden grid md:grid-cols-2 min-h-[400px]">
+        <div className="relative rounded overflow-hidden grid md:grid-cols-2 min-h-[400px]">
           <img
             src={copperMolten}
             alt="Copper smelting and refining"
@@ -320,7 +311,7 @@ export default function Home() {
             { stat: "BME", label: "Bombay Metal Exchange Member" },
             { stat: "Export", label: "Ready Infrastructure" },
           ].map((s) => (
-            <div key={s.label} className="rounded-2xl bg-secondary p-6 text-center">
+            <div key={s.label} className="rounded bg-secondary p-6 text-center">
               <div className="text-2xl md:text-3xl font-light text-brand-gradient mb-2">{s.stat}</div>
               <p className="text-xs font-light text-muted-foreground leading-snug">{s.label}</p>
             </div>
@@ -344,7 +335,7 @@ export default function Home() {
         </div>
         <div className="grid md:grid-cols-2 gap-5">
           {leaders.map((l) => (
-            <div key={l.name} className="rounded-2xl bg-secondary p-8 flex items-start gap-5">
+            <div key={l.name} className="rounded bg-secondary p-8 flex items-start gap-5">
               <div className="h-14 w-14 rounded bg-brand-gradient shrink-0" />
               <div>
                 <h3 className="text-lg font-light tracking-tight">{l.name}</h3>
@@ -358,7 +349,7 @@ export default function Home() {
 
       {/* ── ESG ── */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 mt-28">
-        <div className="rounded-3xl bg-secondary p-10 md:p-16 text-center">
+        <div className="rounded bg-secondary p-10 md:p-16 text-center">
           <span className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground font-light">Sustainability & Responsibility</span>
           <h2 className="mt-4 text-3xl md:text-4xl font-light tracking-tight">Responsibility in Every Refinement</h2>
           <p className="mt-5 max-w-2xl mx-auto text-muted-foreground font-light leading-relaxed">
@@ -374,7 +365,7 @@ export default function Home() {
 
       {/* ── CTA ── */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 mt-28">
-        <div className="relative rounded-3xl overflow-hidden grid md:grid-cols-2 min-h-[340px]">
+        <div className="relative rounded overflow-hidden grid md:grid-cols-2 min-h-[340px]">
           <img
             src={copperFactory}
             alt="Mehtacop copper manufacturing facility"

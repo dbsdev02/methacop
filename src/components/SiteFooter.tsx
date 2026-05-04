@@ -7,6 +7,15 @@ const cols = [
   { links: ["Leadership", "Contact"] },
 ];
 
+const colLinks: Record<string, string> = {
+  "About Us": "/about",
+  "Our Products": "/what-we-do",
+  "Our Edge": "/our-edge",
+  "Industries": "/industries",
+  "Leadership": "/leadership",
+  "Contact": "/contact",
+};
+
 export function SiteFooter() {
   return (
     <footer className="relative bg-brand-gradient text-white mt-24">
@@ -25,7 +34,9 @@ export function SiteFooter() {
           {cols.map((c, i) => (
             <ul key={i} className="space-y-3 text-base font-light">
               {c.links.map((l) => (
-                <li key={l}><a className="hover:opacity-80 transition cursor-pointer">{l}</a></li>
+                <li key={l}>
+                  <Link to={colLinks[l] as any} className="hover:opacity-80 transition">{l}</Link>
+                </li>
               ))}
             </ul>
           ))}
@@ -60,7 +71,9 @@ export function SiteFooter() {
           <a className="hover:opacity-80 transition cursor-pointer">Bombay Non-Ferrous Metal Association</a>
           <div className="ml-auto flex items-center gap-3">
             <span>Follow us on</span>
-            <a className="h-7 w-7 rounded bg-white/15 flex items-center justify-center hover:bg-white/25 transition"><Linkedin className="h-3.5 w-3.5" /></a>
+            <a aria-label="LinkedIn" className="h-7 w-7 rounded bg-white/15 flex items-center justify-center hover:bg-white/25 transition">
+              <Linkedin className="h-3.5 w-3.5" />
+            </a>
           </div>
         </div>
 

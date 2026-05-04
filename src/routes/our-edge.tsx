@@ -7,13 +7,6 @@ import copperWire from "@/assets/copper-wire.jpg";
 import copperIndustry from "@/assets/copper-industry.jpg";
 
 export const Route = createFileRoute("/our-edge")({
-  head: () => ({
-    meta: [
-      { title: "Our Edge — Mehtacop Refinery Pvt. Ltd." },
-      { name: "description", content: "ISO 9001:2015 certified. Consistent high-purity output, scalable production, and export-ready infrastructure. What sets Mehtacop apart." },
-      { property: "og:title", content: "Our Edge — Mehtacop Refinery Pvt. Ltd." },
-    ],
-  }),
   component: OurEdgePage,
 });
 

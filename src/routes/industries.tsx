@@ -10,13 +10,6 @@ import copperFactory from "@/assets/copper-factory.jpg";
 import copperIndustry from "@/assets/copper-industry.jpg";
 
 export const Route = createFileRoute("/industries")({
-  head: () => ({
-    meta: [
-      { title: "Industries We Power — Mehtacop Refinery Pvt. Ltd." },
-      { name: "description", content: "Copper solutions for power & electrical, HVAC, automotive, metal processing, and construction industries. ISO 9001:2015 certified." },
-      { property: "og:title", content: "Industries We Power — Mehtacop Refinery Pvt. Ltd." },
-    ],
-  }),
   component: IndustriesPage,
 });
 

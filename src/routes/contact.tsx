@@ -5,17 +5,6 @@ import { SiteFooter } from "@/components/SiteFooter";
 import copperManufacturing from "@/assets/copper-manufacturing.jpg";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact Us — Mehtacop Refinery Pvt. Ltd." },
-      {
-        name: "description",
-        content:
-          "Get in touch with Mehtacop Refinery for copper supply enquiries, bulk orders, and sourcing partnerships. Located in Palghar, Maharashtra.",
-      },
-      { property: "og:title", content: "Contact Us — Mehtacop Refinery Pvt. Ltd." },
-    ],
-  }),
   component: ContactPage,
 });
 

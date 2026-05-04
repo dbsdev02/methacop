@@ -8,13 +8,6 @@ import copperIngots from "@/assets/copper-ingots.jpg";
 import copperWire from "@/assets/copper-wire.jpg";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Us — Mehtacop Refinery Pvt. Ltd." },
-      { name: "description", content: "Decades of metallurgical expertise. ISO 9001:2015 certified copper manufacturer and exporter. Part of the Nakoda Group of Companies, Palghar, Maharashtra." },
-      { property: "og:title", content: "About Us — Mehtacop Refinery Pvt. Ltd." },
-    ],
-  }),
   component: AboutPage,
 });
 
@@ -95,10 +88,10 @@ function AboutPage() {
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-[11px] uppercase tracking-[0.2em] text-brand-gradient font-medium mb-5">Our Purpose</p>
           <h2 className="text-[clamp(1.6rem,3vw,2.4rem)] font-light leading-tight mb-5 tracking-tight">
-            Connecting Industry to High-Grade Copper
+            A Legacy of Trust. A Future of Innovation.
           </h2>
           <p className="text-sm text-muted-foreground font-light leading-relaxed">
-            From high-purity cathodes to precision-engineered anodes and ingots, we power critical industries with consistent, scalable, and reliable copper solutions. Operating under ISO 9001:2015 standards, we combine advanced refining processes with stringent quality control to ensure every product meets international benchmarks.
+            Mehtacop Refinery Pvt. Ltd., a part of the renowned Nakoda Group of Companies, is a leading manufacturer and exporter of high-quality copper and copper alloy products. With decades of industry expertise and ISO 9001:2015 certification, we specialize in delivering consistent, high-purity materials tailored to industrial standards across global markets.
           </p>
         </div>
 
@@ -143,12 +136,6 @@ function AboutPage() {
               Mehtacop Refinery was established with a clear vision — to bring world-class copper manufacturing to India. Today, we stand as a trusted name in the non-ferrous metal industry, combining decades of legacy with modern metallurgical precision and a commitment to global quality standards.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link
-                to="/about"
-                className="inline-flex w-fit items-center gap-2 rounded bg-brand-gradient text-white px-5 py-2 text-sm font-light hover:opacity-90 transition"
-              >
-                Read More
-              </Link>
               <a
                 href="https://www.nakodagroupofcompanies.com"
                 target="_blank"
@@ -213,9 +200,6 @@ function AboutPage() {
                 </div>
               </div>
             </div>
-            <p className="mt-7 text-sm text-muted-foreground font-light leading-relaxed">
-              Their combined leadership ensures strategic growth, market credibility, and a long-term vision for Mehtacop Refinery.
-            </p>
             <Link
               to="/leadership"
               className="mt-6 inline-flex w-fit items-center gap-2 rounded bg-brand-gradient text-white px-5 py-2 text-sm font-light hover:opacity-90 transition"
@@ -290,4 +274,3 @@ function AboutPage() {
     </div>
   );
 }
-
